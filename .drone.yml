@@ -3,6 +3,7 @@ pipeline:
     image: redis
     commands:
       - env
+      - service redis start
       - redis-cli ping
       - echo "This is TCS Property"
     when:
