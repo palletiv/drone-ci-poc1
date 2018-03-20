@@ -1,0 +1,9 @@
+pipeline:
+  mynewtask:
+    image: redis
+    commands:
+      - env
+      - redis-cli ping
+      - echo "This is TCS Property"
+    when:
+      event: push
